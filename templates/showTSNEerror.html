@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% if possible_genes %}
+		<div style="overflow-y:scroll;overflow-x:hidden;height:600px;width:1200px;">
+			<h3> <br> <br> <br> {{ msgs }} <br> </h3>
+			<br> 
+			<tr> <b>Here are some possible entries:</b> <br><br>  {{ ", ".join(possible_genes) }} </tr>
+			<br> <br> <br>
+			<p style="margin-left:8rem;"> <b> Go Back To : <a href="/TSNE/"> TSNE Plots </a> </b> </p>
+		</div>
+	{% endif %}
+{% endblock %}

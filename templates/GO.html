@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+	<form style="text-align:center;" name="goterms_id_select" id="goterms_id_select" action="/GO/showGO/" method="POST">
+		<label> COMPARISONs <br></label>
+		<select name="comparison_id_select" class="selectpicker form-control"  style="width:120px;height:25px;text-align:center;">
+		  {% for first_selection in first_selections %}
+			<option value="{{ first_selection.name }}">{{ first_selection.name }}</option>
+		  {% endfor %}
+		</select>
+		<br>
+		<br>
+		<label> GO CLASSES and PATHWAY </label>
+		<br>
+		<select name="gopath_id_select" class="selectpicker form-control" style="width:150px;height:25px;text-align:center;">
+		  {% for second_selection in second_selections %}
+			<option value="{{ second_selection.name }}">{{ second_selection.name }}</option>
+		  {% endfor %}
+		</select>
+		<br>
+		<br>
+		<label> CELL IDs </label>
+		<br>
+		<select name="cell_id_select" class="selectpicker form-control" style="width:120px;height:25px;text-align:center;">
+		  {% for third_selection in third_selections %}
+			<option value="{{ third_selection.name }}">{{ third_selection.name }}</option>
+		  {% endfor %}
+		</select>
+		<br>
+		<br>
+		<input type="submit" value="submit">
+	</form>
+{% endblock %}
+

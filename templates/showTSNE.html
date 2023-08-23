@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="container" style="overflow-y:scroll;overflow-x:hidden;height:600px;width:1200px;text-align:center;"> 
+		<embed src="/static/image_files/TSNE/{{sample_id}}_Ftr/{{gene_name}}.png" width="500" height="500">
+        <embed src="/static/image_files/TSNE/TSNE_Plots/{{sample_id}}.png" width="500" height="500">   
+    <li style="text-align:center;font-size:15px;"> <b> Show VlnPlot as: <a href="/static/image_files/TSNE/{{sample_id}}_Vln/{{gene_name}}.png" class="button"> PNG </a></b></li>
+	<li style="text-align:center;font-size:15px;"> <b> FeaturePlot Download as: <a href="/static/image_files/TSNE/{{sample_id}}_Ftr/{{gene_name}}.pdf" class="button"> PDF </a></b> <small style="color:#f00000;"> (for High Quality) </small> </li>
+	<li style="text-align:center;font-size:15px;"> <b> VlnPlot Download as: <a href="/static/image_files/TSNE/{{sample_id}}_Vln/{{gene_name}}.pdf" class="button"> PDF </a></b> <small style="color:#f00000;"> (for High Quality) </small> </li>
+    <li style="text-align:center;font-size:15px;"> <b> Go Back To : <a href="/TSNE/"> TSNE Plots </a> </b> </li>
+	</div>	 
+{% endblock %}

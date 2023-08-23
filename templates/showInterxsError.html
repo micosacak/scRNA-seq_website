@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% if possible_genes %}
+		<div class="container" style="overflow-y:scroll;overflow-x:hidden;width:1200px;height:600px;">
+            <h3> <br> <br> <br> {{ msgs }} <br> </h3>
+			<br> 
+            <tr> <b>Here are some possible entries:</b>  {{ ", ".join(possible_genes) }} </tr>
+            <br> <br> <br>
+            <p style="text-align:center;"> <b> Go Back To : <a href="/InteractionMaps/ByGene/"> Search By Gene </a> </b> </p>
+			<p style="text-align:center;"> <b> Go Back To : <a href="/InteractionMaps/ByPath/"> Search By Path </a> </b> </p>
+		</div>
+	{% endif %}
+{% endblock %}

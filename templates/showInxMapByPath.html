@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="container" style="overflow-y:scroll;overflow-x:hidden;width:1200px;height:600px;text-align:center;"> 
+		<embed src="/static/image_files/InteractionsByPath/{{comparison_id}}/{{pathname_id}}.png" width="800" height="800">    
+		<li style="text-align:center;"> <b> Download as: <a href="/static/image_files/InteractionsByPath/{{comparison_id}}/{{pathname_id}}.pdf" class="button"> PDF </a></b> <small style="color:#f00000;"> (for High Quality) </small> </li>
+		<li style="text-align:center;"> <b> Go Back To : <a href="/InteractionMaps/ByGene/"> Search By Gene </a> </b> </li>
+		<li style="text-align:center;"> <b> Go Back To : <a href="/InteractionMaps/ByPath/"> Search By Path </a> </b> </li>
+	</div>	
+{% endblock %}

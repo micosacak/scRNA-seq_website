@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+	<form style="text-align:center;" name="goterms_id_select" id="goterms_id_select" action="/InteractionMaps/ByGene/showInxMapByGene/" method="POST">
+		<label> COMPARISONs </label>
+		<br>
+		<select name="comparison_id_select" class="selectpicker form-control" style="width:120px;height:25px;text-align:center;">
+		  {% for first_selection in first_selections %}
+			<option value="{{ first_selection.name }}">{{ first_selection.name }}</option>
+		  {% endfor %}
+		</select>
+		<br><br>
+        <label> Gene NAME </label>
+		<br>
+		<input type="text" name="gene_name_select" style="width:200px;">
+		<br>
+		<input type="submit" value="submit">
+	</form>
+{% endblock %}
+

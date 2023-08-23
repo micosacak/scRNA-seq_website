@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+		{% if title %}
+			<title> SCS - {{ title }} </title>
+		{% else %}
+			<title> SCS </title>
+		{% endif %}
+	</head>
+	<body>
+		<div id="my_container">
+			<div id="my_navbar" class="navbar navbar-expand-md navbar-dark bg-steel fixed-top" style="float:none;background-color:white;margin:25px;">
+					<div class="container" style="background-color:white;width:1000px;margin-left:100px;">
+						<ul>
+						<a style="color:black;font-size:20px;padding-right:20px;" class="navbar-brand mr-4" href="/home"><b>Home</b></a>
+						<a style="color:black;font-size:20px;padding-right:20px;" class="navbar-brand mr-4" href="/TSNE"><b>TSNE Plots</b></a>
+						<a style="color:black;font-size:20px;padding-right:20px;" class="navbar-brand mr-4" href="/GO"><b>GO Terms</b></a>
+						<a style="color:black;font-size:20px;padding-right:20px;" class="navbar-brand mr-4" href="/InteractionMaps"><b>Interaction Maps</b></a>
+						<a style="color:black;font-size:20px;padding-right:20px;" class="navbar-brand mr-4" href="/help"><b>Help</b></a>
+						<a style="color:black;font-size:20px;padding-right:20px;" class="navbar-brand mr-4" href="/Impressum"><b>Contact/Impressum</b></a>
+						<a style="color:black;font-size:20px;padding-right:20px;" class="navbar-brand mr-4" href="/NewsUpdates"><b>Updates</b></a>
+						</ul>
+					</div>
+			</div>
+			<div id="my_main" style="margin-left:25px;">
+				{% block content %}
+				{% endblock %}
+			</div>
+			<div id="my_foot_1"  style="margin-left:25px;height:100px;">
+					<div class="image_container" style="float:left;width:200px;">
+						<a href="https://kizillab.org" class="navbar-brand mr-4"> <embed src="/static/kizillab_logo.jpg" width="139" height="100"/> </a>
+					</div>
+					<a href="https://www.dzne.de/" class="navbar-brand mr-4"> <embed src="/static/dzne_logo.png" style="float:right;" width="201" height="100"/> </a>
+			</div>
+			<div id="my_foot_2" style="margin-left:25px;margin-top:0px;font-size:12px;">
+				<p> <b>Disclaimer: </b>All information on this website is protected under Attribution-NonCommercial-NoDerivs 3.0 Unported (CC BY-NC-ND 3.0) license. <br> Please contact <a href="https://kizillab.org/contact">Kizil Lab </a> to get more information. Legal sanctions apply to non-compliance to the license terms. For more information please read: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Common License</a> <br> Last Updated: 06.10.2020 </p>
+			</div>
+		</div>
+	</body>
+</html>

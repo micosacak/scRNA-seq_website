@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="container" style="overflow-y:scroll;overflow-x:hidden;height:600px;width:1200px;text-align:center;"> 
+		<embed src="/static/image_files/GO/{{comparison_id}}/{{cellid}}_{{gopath_id}}.png" width="900" height="900">
+		<li> <b> Download as: <a href="/static/image_files/GO/{{comparison_id}}/{{cellid}}_{{gopath_id}}.pdf" class="button"> PDF </a></b> <small style="color:#f00000;"> (for High Quality) </small> </li>
+		<li> <b> Download as: <a href="/static/image_files/GO/{{comparison_id}}/{{cellid}}_{{gopath_id}}.xlsx" class="button"> Excel </a></b> <small style="color:#f00000;"> (for All Results) </small> </li>
+		<li> <b> Go Back To : <a href="/GO/"> GO Terms </a> </b> </li>
+	</div>
+{% endblock %}

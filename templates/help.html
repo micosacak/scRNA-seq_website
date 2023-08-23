@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div style="overflow-y:hidden;overflow-x:hidden;height:600px;width:1200px;">
+		<h3 style="text-align:center;"> How to use the website? </h3>
+		<video style="margin-left:390px;" width="400px" height="300px" controls>
+			<source src="/static/help_video.mp4" type="video/mp4">
+		</video> 
+		<li style="text-align:center;color:red;"> This video gives an overview how to use the website!</li> <li style="text-align:center;color:red;"> <b> Note: </b> The web design has been updated. </li>
+		<p style="text-align:center;color:color;">The website has three tabs;<a href="/TSNE/"> TSNE Plots</a>, <a href="/GO/"> GO Terms </a> and <a href="/InteractionMaps/">Interaction Maps</a> </p> 
+		</div>
+{% endblock %}
